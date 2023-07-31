@@ -5,10 +5,10 @@ import { SessionProvider } from "next-auth/react";
 export default function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
   return getLayout(
-    <PCItemsProvider>
-      <SessionProvider session={pageProps.session}>
+    <SessionProvider session={pageProps.session}>
+      <PCItemsProvider>
         <Component {...pageProps} />
-      </SessionProvider>
-    </PCItemsProvider>
+      </PCItemsProvider>
+    </SessionProvider>
   );
 }

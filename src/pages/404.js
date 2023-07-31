@@ -13,7 +13,7 @@ export default function ErrorPage() {
     }, 3000);
 
     return () => clearTimeout(redirectTimer);
-  }, []);
+  });
 
   return (
     <div className="flex justify-center">

@@ -8,7 +8,14 @@ export default function Login() {
       <h>
         {" "}
         Please Login By{" "}
-        <button onClick={() => signIn("github")} className="btn  btn-primary">
+        <button
+          onClick={() =>
+            signIn("github", {
+              callbackUrl: "http://localhost:3000",
+            })
+          }
+          className="btn  btn-primary"
+        >
           GitHub
         </button>
       </h>
